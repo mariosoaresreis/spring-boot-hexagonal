@@ -32,7 +32,7 @@ public class ProductRepository implements ProductRepositoryPort {
         if (produtoEntity.isPresent())
             return produtoEntity.get().toProduct();
 
-        throw new RuntimeException("Produto não existe");
+        throw new RuntimeException("Product not found");
     }
 
     @Override
