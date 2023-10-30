@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProductServicePort {
 
-    List<ProductDTO> searchProducts();
+    List<ProductDTO> findProducts();
 
     void createProduct(ProductDTO productDTO);
 

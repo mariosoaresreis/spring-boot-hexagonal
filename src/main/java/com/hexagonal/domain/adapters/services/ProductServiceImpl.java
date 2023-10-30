@@ -26,7 +26,7 @@ public class ProductServiceImpl implements ProductServicePort {
     }
 
     @Override
-    public List<ProductDTO> searchProducts() {
+    public List<ProductDTO> findProducts() {
         List<Product> products = this.productRepository.findAll();
         List<ProductDTO> productDTOS = products.stream().map(Product::toProductDTO).collect(Collectors.toList());
         return productDTOS;

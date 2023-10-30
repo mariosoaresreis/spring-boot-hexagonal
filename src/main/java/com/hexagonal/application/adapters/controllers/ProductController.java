@@ -19,17 +19,17 @@ public class ProductController {
     }
 
     @PostMapping
-    void criarProdutos(@RequestBody ProductDTO productDTO) {
+    void createProducts(@RequestBody ProductDTO productDTO) {
         productServicePort.createProduct(productDTO);
     }
 
     @GetMapping
-    List<ProductDTO> getProdutos() {
-        return productServicePort.searchProducts();
+    List<ProductDTO> getProducts() {
+        return productServicePort.findProducts();
     }
 
     @PutMapping(value = "/{sku}")
-    void atualizarEstoque(@PathVariable String sku, @RequestBody StockDTO stockDTO) throws NotFoundException {
+    void updateStock(@PathVariable String sku, @RequestBody StockDTO stockDTO) throws NotFoundException {
         productServicePort.updateStock(sku, stockDTO);
     }
 }
