@@ -18,6 +18,11 @@ public class ProductController {
         this.productServicePort = productServicePort;
     }
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "Mario is the smartest guy in the room";
+    }
+
     @PostMapping
     void createProducts(@RequestBody ProductDTO productDTO) {
         productServicePort.createProduct(productDTO);
