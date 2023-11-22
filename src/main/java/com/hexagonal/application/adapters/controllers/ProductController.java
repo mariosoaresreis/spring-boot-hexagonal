@@ -20,7 +20,7 @@ public class ProductController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "Mario is the smartest guy in the room";
+        return "Hello, Mario";
     }
 
     @PostMapping
